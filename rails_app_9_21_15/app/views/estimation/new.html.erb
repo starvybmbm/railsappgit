@@ -1,0 +1,10 @@
+<%= form_tag(:action => 'submit') do %>
+<div class="container-fluid col-md-10 col-md-offset-1">
+  <div id ="epic_sortable">
+    <% @epics.each_with_index do |epic,epic_index| %>
+    <%= render epic, :epic_index => epic_index.to_s %>
+        <% end %>
+  </div>
+</div>
+      <%= submit_tag("submit") %>
+  <% end %>

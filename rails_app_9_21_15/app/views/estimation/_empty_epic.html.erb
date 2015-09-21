@@ -1,0 +1,23 @@
+<div id="epic" class="ui-state-default">
+  <table style="background-color:#FFD8AA">
+    <tr>
+      <td><b>Epic</b></td>
+      <td style="text-align: center;"><b>Hours</b></td>
+      <td style="width:30px">
+        <button id="btn_epic" class="ui-state-default btn btn-sm pull-right">+</button>
+        <%= button_to("button",create_path,remote: true, class: "btn btn-default")%>
+      </td>
+    </tr>
+    <tr>
+      <td><%= text_area_tag("text_epic",nil, style: "width:100%;resize: vertical;height:30px")%></td>
+      <td class="col-md-1"><%= text_area_tag("text_epic_hours","hours", style: "width:100%;resize: vertical;text-align:center;height:30px")%></td>
+    </tr>
+    <tr>
+      <td><b>Epic Description</b></td></tr>
+    <tr>
+      <td><%= text_area_tag("text_epic_desc","this is an epic description", style: "width:100%;resize: vertical;height:30px")%></td>
+    </tr>
+  </table>
+  <div id="goal_sortable_0">
+  </div>
+</div>

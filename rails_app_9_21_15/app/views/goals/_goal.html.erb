@@ -1,0 +1,22 @@
+<div id="goal_<%= goal_index %>" class="ui-state-default">
+  <table style="background-color:#FFFFFF">
+    <tr>
+      <td class="col-md-1"></td>
+      <td><b>Goal</b></td>
+      <td style="text-align: center;"><b>Hours</b></td>
+      <td style="width:30px"><button id="btn_goal_<%= goal_index %>" class="ui-state-default btn btn-sm pull-right">+</button></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= text_area_tag("text_goal_"+goal_index,goal.content, style: "width:100%;resize: vertical;height:30px")%></td>
+      <td class="col-md-1"><%= text_area_tag("text_goal_hours","hours", style: "width:100%;resize: vertical;text-align:center;height:30px")%></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><b>Goal Description</b></td></tr>
+    <tr>
+      <td></td>
+      <td><%= text_area_tag("text_goal_desc","this is a goal description", style: "width:100%;resize: vertical;height:30px")%></td>
+    </tr>
+  </table>
+</div>

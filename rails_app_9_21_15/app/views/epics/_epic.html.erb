@@ -1,0 +1,27 @@
+
+
+<div id="epic_<%= epic_index %>" class="ui-state-default">
+  <table style="background-color:#FFD8AA">
+    <tr>
+      <td><b>Epic</b></td>
+      <td style="text-align: center;"><b>Hours</b></td>
+      <td style="width:30px">
+        <button id="btn_epic_<%= epic_index %>" class="ui-state-default btn btn-sm pull-right">+</button>
+      </td>
+    </tr>
+    <tr>
+      <td><%= text_area_tag("text_epic_"+epic_index,epic.content, style: "width:100%;resize: vertical;height:30px")%></td>
+      <td class="col-md-1"><%= text_area_tag("text_epic_hours","hours", style: "width:100%;resize: vertical;text-align:center;height:30px")%></td>
+    </tr>
+    <tr>
+      <td><b>Epic Description</b></td></tr>
+    <tr>
+      <td><%= text_area_tag("text_epic_desc","this is an epic description", style: "width:100%;resize: vertical;height:30px")%></td>
+    </tr>
+  </table>
+  <div id="goal_sortable_0">
+    <% epic.goals.each_with_index do |goal,goal_index| %>
+        <%= render goal, :goal_index => goal_index.to_s %>
+    <% end %>
+  </div>
+</div>
