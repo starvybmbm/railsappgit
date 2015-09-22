@@ -1,0 +1,19 @@
+<div class="container-fluid col-md-10 col-md-offset-1">
+  <%= form_for @estimate, url: estimate_path, method: 'update' do |estimate_form|%>
+      <div id ="epic_sortable">
+        <%= estimate_form.fields_for :epics do |epic_form| %>
+            <%= epic_form.text_field :content%>
+            <%= epic_form.text_field :description%>
+            <%= epic_form.text_field :hours%>
+            <div id ="goal_sortable">
+              <%= epic_form.fields_for :goals do |goal_form| %>
+                  <%= goal_form.text_field :content%>
+                  <%= goal_form.text_field :description%>
+                  <%= goal_form.text_field :hours%>
+              <%end%>
+            </div>
+        <% end %>
+      </div>
+      <%= estimate_form.submit("submit") %>
+  <% end %>
+</div>

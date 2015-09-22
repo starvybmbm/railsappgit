@@ -1,0 +1,7 @@
+
+<div class="container-fluid col-md-10 col-md-offset-1">
+  <%= form_tag('/show', :method => 'get') do %>
+  <%= select_tag("selected_estimate",options_from_collection_for_select(@estimates, "id", "name"))%>
+      <%= submit_tag("submit", class: "btn btn-normal") %>
+  <% end %>
+</div>
